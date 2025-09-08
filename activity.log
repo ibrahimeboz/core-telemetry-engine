@@ -34,3 +34,4 @@
 [2026-07-13 13:07:26] [INFO] scheduler: next execution window validated against policy (latency: 10ms)
 [2026-08-13 14:37:07] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 8ms)
 [2026-08-31 16:37:40] [INFO] telemetry_sync: metrics packet transmitted successfully (latency: 20ms)
+[2025-09-08 10:35:04] [INFO] cache_engine: index verification complete, latency: 8ms (latency: 16ms)
