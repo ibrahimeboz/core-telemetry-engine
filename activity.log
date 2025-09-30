@@ -71,3 +71,4 @@
 [2026-09-02 09:35:27] [INFO] telemetry_sync: metrics packet transmitted successfully (latency: 23ms)
 [2025-09-22 10:10:35] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 8ms)
 [2025-09-25 21:47:23] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 9ms)
+[2025-09-30 09:17:14] [INFO] config_watcher: configuration hash verified unchanged (latency: 27ms)
