@@ -72,3 +72,4 @@
 [2025-09-22 10:10:35] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 8ms)
 [2025-09-25 21:47:23] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 9ms)
 [2025-09-30 09:17:14] [INFO] config_watcher: configuration hash verified unchanged (latency: 27ms)
+[2025-10-15 21:35:42] [INFO] net_listener: keep-alive ping acknowledged from upstream node (latency: 19ms)
