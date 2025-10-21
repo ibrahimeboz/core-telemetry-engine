@@ -123,3 +123,4 @@
 [2025-09-19 15:12:43] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 25ms)
 [2025-09-19 16:53:01] [INFO] config_watcher: configuration hash verified unchanged (latency: 26ms)
 [2025-09-19 19:52:25] [INFO] scheduler: next execution window validated against policy (latency: 21ms)
+[2025-10-21 11:25:16] [INFO] health_probe: all runtime health probes reporting healthy (latency: 25ms)
