@@ -183,3 +183,4 @@
 [2025-10-10 20:41:09] [INFO] health_probe: all runtime health probes reporting healthy (latency: 6ms)
 [2025-10-13 21:27:50] [INFO] health_probe: all runtime health probes reporting healthy (latency: 19ms)
 [2025-10-28 16:59:36] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 28ms)
+[2025-11-12 16:11:06] [INFO] config_watcher: configuration hash verified unchanged (latency: 10ms)
