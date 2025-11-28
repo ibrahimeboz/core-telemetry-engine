@@ -186,3 +186,4 @@
 [2025-11-12 16:11:06] [INFO] config_watcher: configuration hash verified unchanged (latency: 10ms)
 [2025-11-18 22:18:51] [INFO] scheduler: next execution window validated against policy (latency: 9ms)
 [2025-11-24 18:59:37] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 9ms)
+[2025-11-28 13:18:50] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 14ms)
