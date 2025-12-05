@@ -129,3 +129,4 @@
 [2025-11-25 13:51:47] [INFO] cache_engine: index verification complete, latency: 8ms (latency: 16ms)
 [2025-11-25 20:09:12] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 22ms)
 [2025-11-25 21:57:54] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 9ms)
+[2025-12-05 13:48:57] [INFO] health_probe: all runtime health probes reporting healthy (latency: 8ms)
