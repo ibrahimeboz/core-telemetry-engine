@@ -81,3 +81,4 @@
 [2025-11-06 12:21:43] [INFO] cache_engine: index verification complete, latency: 8ms (latency: 12ms)
 [2025-11-19 12:40:10] [INFO] cache_engine: index verification complete, latency: 8ms (latency: 19ms)
 [2025-12-03 11:48:27] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 18ms)
+[2025-12-08 15:30:58] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 24ms)
