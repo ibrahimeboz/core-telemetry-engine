@@ -13,3 +13,4 @@
 [2025-11-26 12:44:50] [INFO] health_probe: all runtime health probes reporting healthy (latency: 25ms)
 [2025-12-19 22:06:25] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 17ms)
 [2025-12-23 12:51:49] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 7ms)
+[2025-12-29 16:58:57] [INFO] config_watcher: configuration hash verified unchanged (latency: 28ms)
