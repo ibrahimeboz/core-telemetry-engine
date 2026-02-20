@@ -140,3 +140,4 @@
 [2026-02-16 20:10:45] [INFO] cache_engine: index verification complete, latency: 8ms (latency: 20ms)
 [2026-02-20 14:07:34] [INFO] health_probe: all runtime health probes reporting healthy (latency: 4ms)
 [2026-02-20 18:36:00] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 16ms)
+[2026-02-20 21:43:39] [INFO] scheduler: next execution window validated against policy (latency: 25ms)
