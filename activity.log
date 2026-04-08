@@ -100,3 +100,4 @@
 [2026-03-30 16:18:57] [INFO] telemetry_sync: metrics packet transmitted successfully (latency: 15ms)
 [2026-03-31 22:38:17] [INFO] telemetry_sync: metrics packet transmitted successfully (latency: 20ms)
 [2026-04-01 18:30:44] [INFO] telemetry_sync: metrics packet transmitted successfully (latency: 8ms)
+[2026-04-08 21:39:18] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 16ms)
