@@ -26,3 +26,4 @@
 [2026-04-15 17:47:08] [INFO] net_listener: keep-alive ping acknowledged from upstream node (latency: 14ms)
 [2026-04-16 14:56:04] [INFO] cache_engine: index verification complete, latency: 8ms (latency: 23ms)
 [2026-04-17 19:34:43] [INFO] cache_engine: index verification complete, latency: 8ms (latency: 24ms)
+[2026-04-24 12:22:39] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 24ms)
