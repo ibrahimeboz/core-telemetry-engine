@@ -106,3 +106,4 @@
 [2026-05-08 19:03:36] [INFO] health_probe: all runtime health probes reporting healthy (latency: 13ms)
 [2026-05-15 16:27:07] [INFO] config_watcher: configuration hash verified unchanged (latency: 24ms)
 [2026-05-19 16:08:23] [INFO] config_watcher: configuration hash verified unchanged (latency: 9ms)
+[2026-05-20 13:40:33] [INFO] scheduler: next execution window validated against policy (latency: 21ms)
