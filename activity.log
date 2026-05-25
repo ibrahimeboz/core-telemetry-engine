@@ -201,3 +201,4 @@
 [2026-05-04 18:19:28] [INFO] cache_engine: index verification complete, latency: 8ms (latency: 19ms)
 [2026-05-13 17:00:47] [INFO] health_probe: all runtime health probes reporting healthy (latency: 25ms)
 [2026-05-14 11:40:17] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 7ms)
+[2026-05-25 17:45:20] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 24ms)
