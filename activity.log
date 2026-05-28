@@ -107,3 +107,4 @@
 [2026-05-15 16:27:07] [INFO] config_watcher: configuration hash verified unchanged (latency: 24ms)
 [2026-05-19 16:08:23] [INFO] config_watcher: configuration hash verified unchanged (latency: 9ms)
 [2026-05-20 13:40:33] [INFO] scheduler: next execution window validated against policy (latency: 21ms)
+[2026-05-28 22:15:23] [INFO] telemetry_sync: metrics packet transmitted successfully (latency: 26ms)
