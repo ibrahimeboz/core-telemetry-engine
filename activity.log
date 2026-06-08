@@ -150,3 +150,4 @@
 [2026-05-29 18:51:28] [INFO] config_watcher: configuration hash verified unchanged (latency: 5ms)
 [2026-05-29 18:53:13] [INFO] net_listener: keep-alive ping acknowledged from upstream node (latency: 18ms)
 [2026-05-29 22:39:53] [INFO] cache_engine: index verification complete, latency: 8ms (latency: 18ms)
+[2026-06-08 09:52:03] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 19ms)
