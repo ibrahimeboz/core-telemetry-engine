@@ -204,3 +204,4 @@
 [2026-05-25 17:45:20] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 24ms)
 [2026-06-02 20:06:00] [INFO] config_watcher: configuration hash verified unchanged (latency: 14ms)
 [2026-06-05 18:42:23] [INFO] telemetry_sync: metrics packet transmitted successfully (latency: 14ms)
+[2026-06-09 12:34:57] [INFO] net_listener: keep-alive ping acknowledged from upstream node (latency: 21ms)
