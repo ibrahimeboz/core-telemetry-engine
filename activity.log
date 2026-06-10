@@ -154,3 +154,4 @@
 [2026-06-08 21:37:57] [INFO] health_probe: all runtime health probes reporting healthy (latency: 12ms)
 [2026-06-08 22:40:52] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 13ms)
 [2026-06-10 12:50:39] [INFO] health_probe: all runtime health probes reporting healthy (latency: 19ms)
+[2026-06-10 14:12:40] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 13ms)
