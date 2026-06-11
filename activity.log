@@ -158,3 +158,4 @@
 [2026-06-10 17:32:29] [INFO] scheduler: next execution window validated against policy (latency: 8ms)
 [2026-06-11 15:01:27] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 20ms)
 [2026-06-11 19:04:34] [INFO] config_watcher: configuration hash verified unchanged (latency: 7ms)
+[2026-06-11 19:52:14] [INFO] cache_engine: index verification complete, latency: 8ms (latency: 19ms)
