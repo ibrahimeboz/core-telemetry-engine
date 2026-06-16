@@ -161,3 +161,4 @@
 [2026-06-11 19:52:14] [INFO] cache_engine: index verification complete, latency: 8ms (latency: 19ms)
 [2026-06-16 10:09:35] [INFO] net_listener: keep-alive ping acknowledged from upstream node (latency: 18ms)
 [2026-06-16 12:42:38] [INFO] cache_engine: index verification complete, latency: 8ms (latency: 7ms)
+[2026-06-16 19:49:18] [INFO] scheduler: next execution window validated against policy (latency: 13ms)
