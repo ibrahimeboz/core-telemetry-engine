@@ -167,3 +167,4 @@
 [2026-06-25 22:52:55] [INFO] config_watcher: configuration hash verified unchanged (latency: 28ms)
 [2026-06-29 16:02:48] [INFO] telemetry_sync: metrics packet transmitted successfully (latency: 16ms)
 [2026-06-29 17:27:41] [INFO] net_listener: keep-alive ping acknowledged from upstream node (latency: 22ms)
+[2026-06-29 19:41:18] [INFO] scheduler: next execution window validated against policy (latency: 4ms)
