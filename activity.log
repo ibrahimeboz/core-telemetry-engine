@@ -209,3 +209,4 @@
 [2026-06-22 16:15:49] [INFO] telemetry_sync: metrics packet transmitted successfully (latency: 5ms)
 [2026-07-01 22:49:42] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 14ms)
 [2026-07-02 15:36:13] [INFO] telemetry_sync: metrics packet transmitted successfully (latency: 18ms)
+[2026-07-08 09:25:18] [INFO] health_probe: all runtime health probes reporting healthy (latency: 4ms)
