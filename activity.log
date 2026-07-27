@@ -58,3 +58,4 @@
 [2026-05-21 19:54:51] [INFO] net_listener: keep-alive ping acknowledged from upstream node (latency: 13ms)
 [2026-05-22 22:06:38] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 20ms)
 [2026-07-07 12:34:28] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 10ms)
+[2026-07-27 17:31:15] [INFO] config_watcher: configuration hash verified unchanged (latency: 25ms)
