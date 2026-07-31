@@ -60,3 +60,4 @@
 [2026-07-07 12:34:28] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 10ms)
 [2026-07-27 17:31:15] [INFO] config_watcher: configuration hash verified unchanged (latency: 25ms)
 [2026-07-28 09:20:22] [INFO] telemetry_sync: metrics packet transmitted successfully (latency: 10ms)
+[2026-07-31 10:53:40] [INFO] cache_engine: index verification complete, latency: 8ms (latency: 12ms)
