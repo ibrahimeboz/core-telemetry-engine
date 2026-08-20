@@ -110,3 +110,4 @@
 [2026-05-28 22:15:23] [INFO] telemetry_sync: metrics packet transmitted successfully (latency: 26ms)
 [2026-06-23 19:17:08] [INFO] scheduler: next execution window validated against policy (latency: 10ms)
 [2026-07-30 21:30:39] [INFO] telemetry_sync: metrics packet transmitted successfully (latency: 21ms)
+[2026-08-20 11:12:08] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 23ms)
