@@ -113,3 +113,4 @@
 [2026-08-20 11:12:08] [INFO] data_pipeline: batch buffer flushed cleanly, 0 drops (latency: 23ms)
 [2026-08-27 14:04:42] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 12ms)
 [2026-09-03 19:22:47] [INFO] cache_engine: index verification complete, latency: 8ms (latency: 5ms)
+[2026-09-04 16:47:07] [INFO] core_worker: worker pool state nominal, active threads: 4 (latency: 24ms)
