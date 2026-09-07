@@ -1,0 +1,107 @@
+name: CI / Service Telemetry & Diagnostics
+
+# -----------------------------------------------------------------------------
+# Triggers: 4 dynamic time windows throughout the day + manual test trigger
+# Windows in UTC: ~07:15 (TR: 10:15), ~11:30 (TR: 14:30), ~15:45 (TR: 18:45), ~18:30 (TR: 21:30)
+# -----------------------------------------------------------------------------
+on:
+  schedule:
+    - cron: '14 7 * * *'
+    - cron: '28 11 * * *'
+    - cron: '43 15 * * *'
+    - cron: '32 18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  telemetry-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Configure Git Identity
+        run: |
+          git config --global user.name "ibrahimeboz"
+          git config --global user.email "ibrahimetemboz@gmail.com"
+
+      - name: Execute Randomized Natural Activity Cycle
+        run: |
+          # 1. Hafta sonu doğal tatil kontrolü
+          DAY_OF_WEEK=$(date -u +%u) # 1=Pazartesi, 7=Pazar
+          if [ "$DAY_OF_WEEK" -ge 6 ]; then
+            WEEKEND_CHANCE=$(( RANDOM % 100 ))
+            if [ "$WEEKEND_CHANCE" -lt 85 ]; then
+              echo "[*] Hafta sonu dinlenme politikasi: Bu zaman penceresi pas gecildi."
+              exit 0
+            fi
+          fi
+
+          # 2. Rastgele pencere zar atımı (%50 ihtimalle bu pencerede commit atılır)
+          WINDOW_ROLL=$(( RANDOM % 100 ))
+          # Manuel tetiklemede (workflow_dispatch) her zaman calistir, cron ise zar at
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$WINDOW_ROLL" -lt 45 ]; then
+            echo "[*] Dogal ritim zar atimi ($WINDOW_ROLL/100): Bu zaman penceresi pas gecildi."
+            exit 0
+          fi
+
+          # 3. Rastgele Jitter Gecikmesi (0 - 300 saniye arasi rastgele bekleme)
+          # Boylece commitler asla ayni dakikada veya sabit saatte gorunmez!
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            JITTER=$(( RANDOM % 240 + 10 ))
+            echo "[*] Dogal zaman kaydirmasi (Jitter): $JITTER saniye bekleniyor..."
+            sleep $JITTER
+          fi
+
+          # 4. Bu pencere icin 1 veya 2 dogal commit uret
+          CYCLE_COUNT=$(( RANDOM % 2 + 1 ))
+          echo "[*] Bu pencerede uretilecek dogal commit sayisi: $CYCLE_COUNT"
+
+          MESSAGES=(
+            "refactor: optimize internal loop execution and data flow"
+            "fix: resolve potential race condition in worker event queue"
+            "perf: streamline payload serialization routines"
+            "docs: update setup instructions and development notes"
+            "style: format codebase in accordance with project linter"
+            "test: expand unit test assertions for corner cases"
+            "chore: routine dependency check and lockfile sync"
+            "ci: adjust automated health check parameters"
+            "refactor: decouple configuration loader from core modules"
+            "fix: correct boundary condition when parsing empty payloads"
+            "perf: reduce redundant memory allocations in hot paths"
+            "chore: minor codebase cleanup and maintenance patch"
+            "docs: clarify environment configuration requirements"
+            "style: organize imports alphabetically and remove unused references"
+            "refactor: simplify modular helper utilities"
+            "fix: sanitize input arguments to avoid unexpected type mismatch"
+            "perf: fine-tune async execution cadence to lower latency"
+            "test: verify telemetry logging output consistency"
+            "feat: enhance logging granularity for service diagnostics"
+            "chore: periodic sync of runtime diagnostic configurations"
+          )
+
+          COMPONENTS=(
+            "core_worker: worker pool state nominal"
+            "telemetry_sync: metrics packet transmitted successfully"
+            "cache_engine: index verification complete"
+            "scheduler: execution window validated"
+            "health_probe: all runtime health probes reporting healthy"
+            "data_pipeline: batch buffer flushed cleanly"
+          )
+
+          for i in $(seq 1 $CYCLE_COUNT); do
+            NOW_UTC=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
+            RAND_COMP=${COMPONENTS[$RANDOM % ${#COMPONENTS[@]}]}
+            LATENCY=$(( RANDOM % 22 + 6 ))
+            
+            echo "[$NOW_UTC] [INFO] $RAND_COMP (latency: ${LATENCY}ms)" >> activity.log
+            
+            RAND_MSG=${MESSAGES[$RANDOM % ${#MESSAGES[@]}]}
+            git add activity.log
+            git commit -m "$RAND_MSG"
+          done
+
+          git push

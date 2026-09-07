@@ -1,0 +1,19 @@
+{
+  "github": {
+    "username": "ibrahimeboz",
+    "email": "ibrahimetemboz@gmail.com"
+  },
+  "automation": {
+    "enabled": true,
+    "minCommits": 1,
+    "maxCommits": 5,
+    "skipWeekends": true
+  },
+  "gapFiller": {
+    "density": "sparse",
+    "customRatio": 0.25,
+    "maxPerDay": 1,
+    "maxTotalCommits": 35,
+    "skipWeekends": true
+  }
+}

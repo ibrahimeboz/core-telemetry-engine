@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telemetry & Activity Control Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+      <div class="brand-area">
+        <div class="brand-badge">
+          <span class="pulse-dot"></span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>Telemetry Engine</h1>
+          <span class="brand-subtitle">Automated Background Activity Daemon</span>
+        </div>
+      </div>
+
+      <div class="nav-status-pills">
+        <div class="status-pill user-pill" id="nav-user-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span id="nav-username">ibrahimeboz</span>
+        </div>
+
+        <div class="status-pill date-pill" title="Bu tarihten öncesine ASLA commit atılamaz">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>Hesap Açılışı: <strong id="nav-created-at">05.09.2025</strong></span>
+        </div>
+
+        <div class="status-pill online-pill">
+          <span class="dot-online"></span>
+          <span>Stealth Aktif</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Grid Content -->
+    <main class="main-grid">
+      <!-- Left Column: Daily Automation -->
+      <section class="card glass-card">
+        <div class="card-header">
+          <div class="card-tag tag-emerald">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>7/24 Sürekli Otomasyon</span>
+          </div>
+          <h2>Günlük Doğal Katkı (Rastgele Saatler)</h2>
+          <p class="card-desc">GitHub Actions ile günün sabit bir saatinde değil, 4 farklı zaman penceresinde rastgele saat ve dakikalarda tamamen doğal commit üretilir.</p>
+        </div>
+
+        <!-- 4 Time Windows Visualizer -->
+        <div class="windows-container">
+          <span class="windows-title">Rastgele Dağıtılan Günlük Zaman Pencereleri:</span>
+          <div class="windows-grid">
+            <div class="window-item">
+              <span class="window-icon">🌅</span>
+              <div class="window-info">
+                <strong>Sabah Penceresi</strong>
+                <small>10:00 - 12:00 TR</small>
+              </div>
+            </div>
+            <div class="window-item">
+              <span class="window-icon">☀️</span>
+              <div class="window-info">
+                <strong>Öğle Penceresi</strong>
+                <small>14:00 - 16:00 TR</small>
+              </div>
+            </div>
+            <div class="window-item">
+              <span class="window-icon">🌇</span>
+              <div class="window-info">
+                <strong>İkindi Penceresi</strong>
+                <small>18:00 - 19:30 TR</small>
+              </div>
+            </div>
+            <div class="window-item">
+              <span class="window-icon">🌙</span>
+              <div class="window-info">
+                <strong>Akşam Penceresi</strong>
+                <small>21:00 - 23:00 TR</small>
+              </div>
+            </div>
+          </div>
+          <small class="windows-note">⚡ Her pencerede %50 olasılıkla işlem yapılır ve 0-15 dk arası rastgele kaydırma (jitter) uygulanır.</small>
+        </div>
+
+        <!-- Settings Form -->
+        <form id="daily-settings-form">
+          <div class="input-row">
+            <div class="form-field">
+              <label for="cfg-username">GitHub Kullanıcı Adı</label>
+              <input type="text" id="cfg-username" class="form-input" required>
+            </div>
+            <div class="form-field">
+              <label for="cfg-email">Doğrulanmış E-Posta</label>
+              <input type="email" id="cfg-email" class="form-input" required>
+            </div>
+          </div>
+
+          <div class="input-row" style="margin-top: 14px;">
+            <div class="form-field">
+              <label for="cfg-min-commits">Günlük Min Commit</label>
+              <input type="number" id="cfg-min-commits" class="form-input" min="1" max="5" value="1">
+            </div>
+            <div class="form-field">
+              <label for="cfg-max-commits">Günlük Max Commit</label>
+              <input type="number" id="cfg-max-commits" class="form-input" min="1" max="6" value="3">
+            </div>
+          </div>
+
+          <div class="checkbox-row" style="margin-top: 14px;">
+            <label class="custom-toggle">
+              <input type="checkbox" id="cfg-skip-weekends" checked>
+              <span class="toggle-track"></span>
+              <span class="toggle-label">Hafta sonu doğal dinlenme (%85 pas geç)</span>
+            </label>
+          </div>
+
+          <div class="btn-group" style="margin-top: 20px;">
+            <button type="submit" class="btn btn-emerald" id="btn-save-cfg">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                <polyline points="7 3 7 8 15 8"></polyline>
+              </svg>
+              <span>Ayarları Kaydet & Senkronize Et</span>
+            </button>
+
+            <button type="button" class="btn btn-subtle" id="btn-trigger-test" title="Şimdi 1 adet rastgele test commit atıp pushlar">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span>Tekil Test Commit At</span>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Right Column: One-Time Account Lifetime Gap Filler -->
+      <section class="card glass-card">
+        <div class="card-header">
+          <div class="card-tag tag-indigo">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>Tek Seferlik Sihirbaz</span>
+          </div>
+          <h2>Hesap Geçmişi Boşluk Doldurucu</h2>
+          <p class="card-desc">Hesap açılışınızdan (05.09.2025) bugüne kadar geçen süredeki boş günleri tespit eder. Dolu günlere asla dokunmadan, doğal ve seyrek bir ritimle kapatır.</p>
+        </div>
+
+        <!-- Density Selector Cards -->
+        <div class="density-group">
+          <label class="field-title">Doldurma Yoğunluğu (Seyreklik Oranı):</label>
+          <div class="density-cards">
+            <!-- Option 1: Ultra Sparse -->
+            <label class="density-card selected" id="card-ultra-sparse">
+              <input type="radio" name="density-choice" value="ultra_sparse" checked>
+              <div class="density-header">
+                <span class="density-badge badge-green">Çok Seyrek (%20)</span>
+                <span class="density-shield">🛡️ En Güvenli</span>
+              </div>
+              <strong class="density-name">Organik Yazılımcı Modu</strong>
+              <p class="density-desc">Boş günlerin yalnızca %20'si doldurulur. Gün başına 1 commit, hafta sonları %100 boş. Recruiter dostudur.</p>
+            </label>
+
+            <!-- Option 2: Sparse -->
+            <label class="density-card" id="card-sparse">
+              <input type="radio" name="density-choice" value="sparse">
+              <div class="density-header">
+                <span class="density-badge badge-amber">Dengeli Seyrek (%35)</span>
+              </div>
+              <strong class="density-name">Düzenli Katkı Modu</strong>
+              <p class="density-desc">Boş günlerin %35'i doldurulur. Gün başına 1 commit, hafta sonları nadiren. Dengeli bir yeşillik sağlar.</p>
+            </label>
+
+            <!-- Option 3: Custom -->
+            <label class="density-card" id="card-custom">
+              <input type="radio" name="density-choice" value="custom">
+              <div class="density-header">
+                <span class="density-badge badge-cyan">Özel Ayar</span>
+              </div>
+              <strong class="density-name">Manuel Kontrol</strong>
+              <p class="density-desc">Doluluk oranını, gün başına commit limitini ve toplam kotayı kendiniz belirlersiniz.</p>
+            </label>
+          </div>
+        </div>
+
+        <!-- Custom Options Drawer (Hidden by default) -->
+        <div class="custom-drawer hidden" id="custom-density-drawer">
+          <div class="input-row">
+            <div class="form-field">
+              <label for="custom-ratio">Doluluk Oranı (%)</label>
+              <input type="number" id="custom-ratio" class="form-input" min="10" max="60" value="25">
+            </div>
+            <div class="form-field">
+              <label for="custom-max-per-day">Gün Başına Max Commit</label>
+              <input type="number" id="custom-max-per-day" class="form-input" min="1" max="3" value="1">
+            </div>
+            <div class="form-field">
+              <label for="custom-max-total">Maksimum Toplam Kota</label>
+              <input type="number" id="custom-max-total" class="form-input" min="10" max="80" value="35">
+            </div>
+          </div>
+        </div>
+
+        <!-- Lifetime Action Buttons -->
+        <div class="action-buttons-stack" style="margin-top: 22px;">
+          <button type="button" class="btn btn-cyan-outline" id="btn-analyze-lifetime">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>1. Hesap Geçmişini Canlı Analiz Et</span>
+          </button>
+
+          <button type="button" class="btn btn-indigo" id="btn-fill-lifetime">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            <span>2. Boş Günleri Seyrek Doldur ve Pushla</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Console Section -->
+    <section class="console-card">
+      <div class="console-topbar">
+        <div class="console-dots">
+          <span class="mac-dot red"></span>
+          <span class="mac-dot yellow"></span>
+          <span class="mac-dot green"></span>
+        </div>
+        <span class="console-title">Sistem & İşlem Çıktısı (Live Console)</span>
+        <button type="button" class="btn-clear" id="btn-clear-console">Temizle</button>
+      </div>
+      <pre class="console-terminal" id="console-stream">Sistem hazır. GitHub Actions ve Stealth motoru senkronize durumda.</pre>
+    </section>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+      <span id="toast-text">Bildirim mesajı</span>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
