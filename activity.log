@@ -218,3 +218,4 @@
 [2026-09-07 19:24:53 UTC] [INFO] health_probe: all runtime health probes reporting healthy (latency: 10ms)
 [2026-09-07 19:24:53 UTC] [INFO] data_pipeline: batch buffer flushed cleanly (latency: 20ms)
 [2026-09-07 21:46:47 UTC] [INFO] data_pipeline: batch buffer flushed cleanly (latency: 27ms)
+[2026-09-07 21:46:47 UTC] [INFO] core_worker: worker pool state nominal (latency: 15ms)
