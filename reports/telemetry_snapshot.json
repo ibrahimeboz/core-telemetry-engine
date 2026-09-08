@@ -1,4 +1,27 @@
 {
-  "test_run": true,
-  "status": "OK"
+  "metadata": {
+    "node_id": "runner-ci",
+    "version": "1.2.4",
+    "last_synced_utc": "2026-09-08T10:16:39Z",
+    "operational_status": "OPTIMAL"
+  },
+  "system": {
+    "system": "Linux",
+    "release": "6.17.0-1022-azure",
+    "python_version": "3.11.16",
+    "cpu_count": 4
+  },
+  "metrics": {
+    "cpu_load_pct": 47.05,
+    "memory_usage_mb": 341.9,
+    "event_loop_latency_ms": 0.325,
+    "active_workers": 7,
+    "throughput_qps": 1933.4,
+    "disk": {
+      "total_gb": 144.26,
+      "used_gb": 58.12,
+      "free_gb": 86.12,
+      "utilization_pct": 40.29
+    }
+  }
 }
