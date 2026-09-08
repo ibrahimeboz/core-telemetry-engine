@@ -2,6 +2,7 @@ import unittest
 from src.telemetry.collector import SystemMetricsCollector
 from src.telemetry.engine import TelemetryEngine
 from src.telemetry.storage import TelemetryStorage
+from src.telemetry.ledger import TelemetryLedger
 
 
 class TestTelemetryEngine(unittest.TestCase):
@@ -9,6 +10,7 @@ class TestTelemetryEngine(unittest.TestCase):
         self.collector = SystemMetricsCollector(node_id="test-node")
         self.engine = TelemetryEngine()
         self.storage = TelemetryStorage()
+        self.ledger = TelemetryLedger(node_id="test-node")
 
     def test_collector_output_structure(self):
         sample = self.collector.collect()
@@ -40,6 +42,11 @@ class TestTelemetryEngine(unittest.TestCase):
         self.assertTrue(path.exists())
         loaded = self.storage.read_latest_snapshot()
         self.assertEqual(loaded.get("test_run"), True)
+
+    def test_ledger_message_synthesis(self):
+        msg = self.ledger.synthesize_diagnostic_message()
+        self.assertTrue(any(msg.startswith(prefix) for prefix in ["perf(", "test(", "chore(", "refactor(", "fix(", "docs(", "ci(", "feat(", "style("]))
+        self.assertIn("): ", msg)
 
 
 if __name__ == "__main__":

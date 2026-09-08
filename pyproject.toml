@@ -20,3 +20,6 @@ classifiers = [
 
 [project.scripts]
 telemetry-runner = "src.telemetry.runner:main"
+
+[tool.pyright]
+extraPaths = ["."]

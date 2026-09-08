@@ -13,5 +13,6 @@ __license__ = "MIT"
 from .collector import SystemMetricsCollector
 from .engine import TelemetryEngine
 from .storage import TelemetryStorage
+from .ledger import TelemetryLedger
 
-__all__ = ["SystemMetricsCollector", "TelemetryEngine", "TelemetryStorage"]
+__all__ = ["SystemMetricsCollector", "TelemetryEngine", "TelemetryStorage", "TelemetryLedger"]

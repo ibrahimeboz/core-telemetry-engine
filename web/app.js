@@ -150,7 +150,8 @@ dailyForm.addEventListener("submit", async (e) => {
     if (result.success) {
       showToast("Configuration saved and workflow synchronized.");
       navUsername.textContent = payload.github.username;
-      logToConsole("Configuration Update", `Committer: ${payload.github.username} <${payload.github.email}>\nCycles: ${payload.automation.minCommits} - ${payload.automation.maxCommits}\nWeekend Policy: ${payload.automation.skipWeekends ? "Active" : "Disabled"}`);
+      const telCfg = payload.telemetry || {};
+      logToConsole("Configuration Update", `Committer: ${payload.github.username} <${payload.github.email}>\nCycles: ${telCfg.minCycles || 1} - ${telCfg.maxCycles || 3}\nWeekend Policy: ${telCfg.skipWeekends ? "Active" : "Disabled"}`);
     } else {
       showToast("Error: " + result.error, true);
     }
