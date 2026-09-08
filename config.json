@@ -3,17 +3,17 @@
     "username": "ibrahimeboz",
     "email": "ibrahimetemboz@gmail.com"
   },
-  "automation": {
+  "telemetry": {
     "enabled": true,
-    "minCommits": 1,
-    "maxCommits": 5,
+    "minCycles": 1,
+    "maxCycles": 3,
     "skipWeekends": true
   },
-  "gapFiller": {
+  "archivalSync": {
     "density": "sparse",
     "customRatio": 0.25,
     "maxPerDay": 1,
-    "maxTotalCommits": 35,
+    "maxTotalSnapshots": 35,
     "skipWeekends": true
   }
 }

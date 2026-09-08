@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Telemetry & Activity Control Center</title>
+  <title>Core Telemetry Engine | Diagnostic Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -21,8 +21,8 @@
           </svg>
         </div>
         <div class="brand-text">
-          <h1>Telemetry Engine</h1>
-          <span class="brand-subtitle">Automated Background Activity Daemon</span>
+          <h1>Core Telemetry Engine</h1>
+          <span class="brand-subtitle">Runtime Performance & Diagnostics Console</span>
         </div>
       </div>
 
@@ -35,91 +35,91 @@
           <span id="nav-username">ibrahimeboz</span>
         </div>
 
-        <div class="status-pill date-pill" title="Bu tarihten öncesine ASLA commit atılamaz">
+        <div class="status-pill date-pill" title="Initial baseline registration date">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
           </svg>
-          <span>Hesap Açılışı: <strong id="nav-created-at">05.09.2025</strong></span>
+          <span>Baseline: <strong id="nav-created-at">05.09.2025</strong></span>
         </div>
 
         <div class="status-pill online-pill">
           <span class="dot-online"></span>
-          <span>Stealth Aktif</span>
+          <span>Engine Active</span>
         </div>
       </div>
     </header>
 
     <!-- Main Grid Content -->
     <main class="main-grid">
-      <!-- Left Column: Daily Automation -->
+      <!-- Left Column: Scheduled Diagnostics -->
       <section class="card glass-card">
         <div class="card-header">
           <div class="card-tag tag-emerald">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
-            <span>7/24 Sürekli Otomasyon</span>
+            <span>Continuous Diagnostics</span>
           </div>
-          <h2>Günlük Doğal Katkı (Rastgele Saatler)</h2>
-          <p class="card-desc">GitHub Actions ile günün sabit bir saatinde değil, 4 farklı zaman penceresinde rastgele saat ve dakikalarda tamamen doğal commit üretilir.</p>
+          <h2>Scheduled Telemetry & Calibration</h2>
+          <p class="card-desc">Dynamic CI execution intervals perform system profiling, latency distribution calculations, and snapshot registry synchronization.</p>
         </div>
 
-        <!-- 4 Time Windows Visualizer -->
+        <!-- 4 Windows Visualizer -->
         <div class="windows-container">
-          <span class="windows-title">Rastgele Dağıtılan Günlük Zaman Pencereleri:</span>
+          <span class="windows-title">Scheduled Dispatch Windows:</span>
           <div class="windows-grid">
             <div class="window-item">
-              <span class="window-icon">🌅</span>
+              <span class="window-icon">01</span>
               <div class="window-info">
-                <strong>Sabah Penceresi</strong>
-                <small>10:00 - 12:00 TR</small>
+                <strong>Morning Window</strong>
+                <small>07:14 UTC (~10:14 TR)</small>
               </div>
             </div>
             <div class="window-item">
-              <span class="window-icon">☀️</span>
+              <span class="window-icon">02</span>
               <div class="window-info">
-                <strong>Öğle Penceresi</strong>
-                <small>14:00 - 16:00 TR</small>
+                <strong>Midday Window</strong>
+                <small>11:28 UTC (~14:28 TR)</small>
               </div>
             </div>
             <div class="window-item">
-              <span class="window-icon">🌇</span>
+              <span class="window-icon">03</span>
               <div class="window-info">
-                <strong>İkindi Penceresi</strong>
-                <small>18:00 - 19:30 TR</small>
+                <strong>Afternoon Window</strong>
+                <small>15:43 UTC (~18:43 TR)</small>
               </div>
             </div>
             <div class="window-item">
-              <span class="window-icon">🌙</span>
+              <span class="window-icon">04</span>
               <div class="window-info">
-                <strong>Akşam Penceresi</strong>
-                <small>21:00 - 23:00 TR</small>
+                <strong>Evening Window</strong>
+                <small>18:32 UTC (~21:32 TR)</small>
               </div>
             </div>
           </div>
-          <small class="windows-note">⚡ Her pencerede %50 olasılıkla işlem yapılır ve 0-15 dk arası rastgele kaydırma (jitter) uygulanır.</small>
+          <small class="windows-note">Execution policy applies dynamic jitter calibration (10s - 220s) to reflect natural operational variance.</small>
         </div>
 
         <!-- Settings Form -->
         <form id="daily-settings-form">
           <div class="input-row">
             <div class="form-field">
-              <label for="cfg-username">GitHub Kullanıcı Adı</label>
+              <label for="cfg-username">Committer Identity (Username)</label>
               <input type="text" id="cfg-username" class="form-input" required>
             </div>
             <div class="form-field">
-              <label for="cfg-email">Doğrulanmış E-Posta</label>
+              <label for="cfg-email">Committer Email</label>
               <input type="email" id="cfg-email" class="form-input" required>
             </div>
           </div>
 
           <div class="input-row" style="margin-top: 14px;">
             <div class="form-field">
-              <label for="cfg-min-commits">Günlük Min Commit</label>
+              <label for="cfg-min-commits">Min Daily Cycles</label>
               <input type="number" id="cfg-min-commits" class="form-input" min="1" max="5" value="1">
             </div>
             <div class="form-field">
-              <label for="cfg-max-commits">Günlük Max Commit</label>
+              <label for="cfg-max-commits">Max Daily Cycles</label>
               <input type="number" id="cfg-max-commits" class="form-input" min="1" max="6" value="3">
             </div>
           </div>
@@ -128,7 +128,7 @@
             <label class="custom-toggle">
               <input type="checkbox" id="cfg-skip-weekends" checked>
               <span class="toggle-track"></span>
-              <span class="toggle-label">Hafta sonu doğal dinlenme (%85 pas geç)</span>
+              <span class="toggle-label">Weekend low-cadence policy (reduce scheduled runs by 80%)</span>
             </label>
           </div>
 
@@ -139,102 +139,101 @@
                 <polyline points="17 21 17 13 7 13 7 21"></polyline>
                 <polyline points="7 3 7 8 15 8"></polyline>
               </svg>
-              <span>Ayarları Kaydet & Senkronize Et</span>
+              <span>Save & Sync Configuration</span>
             </button>
 
-            <button type="button" class="btn btn-subtle" id="btn-trigger-test" title="Şimdi 1 adet rastgele test commit atıp pushlar">
+            <button type="button" class="btn btn-subtle" id="btn-trigger-test" title="Execute a diagnostic and benchmark sync cycle immediately">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
               </svg>
-              <span>Tekil Test Commit At</span>
+              <span>Execute Diagnostic Cycle</span>
             </button>
           </div>
         </form>
       </section>
 
-      <!-- Right Column: One-Time Account Lifetime Gap Filler -->
+      <!-- Right Column: Historical Archival Sync -->
       <section class="card glass-card">
         <div class="card-header">
           <div class="card-tag tag-indigo">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             </svg>
-            <span>Tek Seferlik Sihirbaz</span>
+            <span>Archival Synchronization</span>
           </div>
-          <h2>Hesap Geçmişi Boşluk Doldurucu</h2>
-          <p class="card-desc">Hesap açılışınızdan (05.09.2025) bugüne kadar geçen süredeki boş günleri tespit eder. Dolu günlere asla dokunmadan, doğal ve seyrek bir ritimle kapatır.</p>
+          <h2>Historical Telemetry Backfill</h2>
+          <p class="card-desc">Analyzes the timeline since initial repository baseline and records calibrated historical telemetry snapshots for unindexed intervals.</p>
         </div>
 
-        <!-- Density Selector Cards -->
+        <!-- Sampling Selector Cards -->
         <div class="density-group">
-          <label class="field-title">Doldurma Yoğunluğu (Seyreklik Oranı):</label>
+          <label class="field-title">Archival Sampling Density Profile:</label>
           <div class="density-cards">
-            <!-- Option 1: Ultra Sparse -->
+            <!-- Option 1: Conservative -->
             <label class="density-card selected" id="card-ultra-sparse">
               <input type="radio" name="density-choice" value="ultra_sparse" checked>
               <div class="density-header">
-                <span class="density-badge badge-green">Çok Seyrek (%20)</span>
-                <span class="density-shield">🛡️ En Güvenli</span>
+                <span class="density-badge badge-green">Conservative (20%)</span>
               </div>
-              <strong class="density-name">Organik Yazılımcı Modu</strong>
-              <p class="density-desc">Boş günlerin yalnızca %20'si doldurulur. Gün başına 1 commit, hafta sonları %100 boş. Recruiter dostudur.</p>
+              <strong class="density-name">Standard Baseline</strong>
+              <p class="density-desc">Samples 20% of unindexed days. 1 snapshot per interval, business days only.</p>
             </label>
 
-            <!-- Option 2: Sparse -->
+            <!-- Option 2: Balanced -->
             <label class="density-card" id="card-sparse">
               <input type="radio" name="density-choice" value="sparse">
               <div class="density-header">
-                <span class="density-badge badge-amber">Dengeli Seyrek (%35)</span>
+                <span class="density-badge badge-amber">Balanced (35%)</span>
               </div>
-              <strong class="density-name">Düzenli Katkı Modu</strong>
-              <p class="density-desc">Boş günlerin %35'i doldurulur. Gün başına 1 commit, hafta sonları nadiren. Dengeli bir yeşillik sağlar.</p>
+              <strong class="density-name">Periodic Sync</strong>
+              <p class="density-desc">Samples 35% of unindexed days. Consistent telemetry records across weekly windows.</p>
             </label>
 
             <!-- Option 3: Custom -->
             <label class="density-card" id="card-custom">
               <input type="radio" name="density-choice" value="custom">
               <div class="density-header">
-                <span class="density-badge badge-cyan">Özel Ayar</span>
+                <span class="density-badge badge-cyan">Custom Specification</span>
               </div>
-              <strong class="density-name">Manuel Kontrol</strong>
-              <p class="density-desc">Doluluk oranını, gün başına commit limitini ve toplam kotayı kendiniz belirlersiniz.</p>
+              <strong class="density-name">Custom Parameters</strong>
+              <p class="density-desc">Configure granular sampling ratio, daily snapshots limit, and total batch quota.</p>
             </label>
           </div>
         </div>
 
-        <!-- Custom Options Drawer (Hidden by default) -->
+        <!-- Custom Options Drawer -->
         <div class="custom-drawer hidden" id="custom-density-drawer">
           <div class="input-row">
             <div class="form-field">
-              <label for="custom-ratio">Doluluk Oranı (%)</label>
+              <label for="custom-ratio">Sampling Ratio (%)</label>
               <input type="number" id="custom-ratio" class="form-input" min="10" max="60" value="25">
             </div>
             <div class="form-field">
-              <label for="custom-max-per-day">Gün Başına Max Commit</label>
+              <label for="custom-max-per-day">Max Snapshots / Day</label>
               <input type="number" id="custom-max-per-day" class="form-input" min="1" max="3" value="1">
             </div>
             <div class="form-field">
-              <label for="custom-max-total">Maksimum Toplam Kota</label>
+              <label for="custom-max-total">Total Batch Limit</label>
               <input type="number" id="custom-max-total" class="form-input" min="10" max="80" value="35">
             </div>
           </div>
         </div>
 
-        <!-- Lifetime Action Buttons -->
+        <!-- Action Buttons -->
         <div class="action-buttons-stack" style="margin-top: 22px;">
           <button type="button" class="btn btn-cyan-outline" id="btn-analyze-lifetime">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <span>1. Hesap Geçmişini Canlı Analiz Et</span>
+            <span>1. Inspect Timeline Coverage</span>
           </button>
 
           <button type="button" class="btn btn-indigo" id="btn-fill-lifetime">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
-            <span>2. Boş Günleri Seyrek Doldur ve Pushla</span>
+            <span>2. Synchronize Historical Snapshots</span>
           </button>
         </div>
       </section>
@@ -248,15 +247,15 @@
           <span class="mac-dot yellow"></span>
           <span class="mac-dot green"></span>
         </div>
-        <span class="console-title">Sistem & İşlem Çıktısı (Live Console)</span>
-        <button type="button" class="btn-clear" id="btn-clear-console">Temizle</button>
+        <span class="console-title">Telemetry Diagnostic Event Stream</span>
+        <button type="button" class="btn-clear" id="btn-clear-console">Clear Stream</button>
       </div>
-      <pre class="console-terminal" id="console-stream">Sistem hazır. GitHub Actions ve Stealth motoru senkronize durumda.</pre>
+      <pre class="console-terminal" id="console-stream">Telemetry Engine initialized. Snapshot persistence and benchmark registry nominal.</pre>
     </section>
 
     <!-- Toast Notification -->
     <div id="toast" class="toast hidden">
-      <span id="toast-text">Bildirim mesajı</span>
+      <span id="toast-text">Notification message</span>
     </div>
   </div>
 

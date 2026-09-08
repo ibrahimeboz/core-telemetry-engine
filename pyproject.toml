@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "core-telemetry-engine"
+version = "1.2.4"
+authors = [
+  { name = "ibrahimeboz", email = "ibrahimetemboz@gmail.com" },
+]
+description = "Lightweight zero-dependency runtime telemetry aggregator and system latency profiler."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Monitoring",
+]
+
+[project.scripts]
+telemetry-runner = "src.telemetry.runner:main"

@@ -1,32 +1,29 @@
 @echo off
 chcp 65001 > nul
-title GitHub Contributions Bot - Kontrol Paneli
+title Telemetry Engine - Diagnostic Studio
 
 echo ======================================================
-echo    GitHub Contributions Otomasyon Yonetim Paneli
+echo    Core Telemetry Engine - Diagnostic Studio
 echo ======================================================
 echo.
 
-:: 1. Python Varlik Kontrolu
-echo [*] Python calisma ortami kontrol ediliyor...
+echo [*] Checking Python environment...
 python --version >nul 2>&1
 if %errorlevel% neq 0 (
     echo.
-    echo [HATA] Sistemde Python bulunamadi!
-    echo Lutfen Python 3 yukleyin ve PATH ortam degiskenine ekleyin.
+    echo [ERROR] Python not found in system PATH.
+    echo Please install Python 3.9 or newer.
     echo.
     pause
     exit /b 1
 )
 
-:: 2. Tarayicida Web Panelini Ac ve Sunucuyu Baslat
-echo [*] Web Paneli baslatiliyor: http://localhost:5000
-echo [*] Varsayilan tarayici aciliyor...
+echo [*] Launching Diagnostic Studio at http://localhost:5000...
 timeout /t 1 > nul
 start http://localhost:5000
 
 echo.
-echo [BILGI] Sunucu calisiyor. Paneli kapatmak icin bu pencereyi kapatabilirsiniz.
+echo [INFO] Studio server running. Press Ctrl+C or close this window to exit.
 echo ------------------------------------------------------
 python server.py
 pause

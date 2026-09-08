@@ -1,7 +1,31 @@
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Unit test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local configuration & environment
+config.local.json
+.env
+.venv
+env/
+venv/
+
+# Editor artifacts
 .vscode/
 .idea/
 Thumbs.db
+
+# Developer scratch & private notes
+*.tmp
+*.log
 kişisel prompt.txt

@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "node_id": "node-local",
+    "version": "1.2.4",
+    "last_synced_utc": "2026-09-08T10:03:13Z",
+    "operational_status": "OPTIMAL"
+  },
+  "system": {
+    "system": "Windows",
+    "release": "11",
+    "python_version": "3.13.14",
+    "cpu_count": 20
+  },
+  "metrics": {
+    "cpu_load_pct": 41.53,
+    "memory_usage_mb": 346.8,
+    "event_loop_latency_ms": 0.761,
+    "active_workers": 4,
+    "throughput_qps": 1917.5,
+    "disk": {
+      "total_gb": 952.82,
+      "used_gb": 556.22,
+      "free_gb": 396.6,
+      "utilization_pct": 58.38
+    }
+  }
+}
