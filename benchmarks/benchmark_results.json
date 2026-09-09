@@ -163,5 +163,16 @@
     },
     "throughput_qps": 2313.3,
     "memory_mb": 449.6
+  },
+  {
+    "timestamp": "2026-09-09T18:52:02Z",
+    "iterations": 30,
+    "percentiles": {
+      "p50": 0.458,
+      "p95": 0.838,
+      "p99": 0.87
+    },
+    "throughput_qps": 2295.7,
+    "memory_mb": 441.6
   }
 ]
