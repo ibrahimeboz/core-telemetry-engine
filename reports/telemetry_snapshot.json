@@ -12,11 +12,11 @@
     "cpu_count": 4
   },
   "metrics": {
-    "cpu_load_pct": 37.34,
-    "memory_usage_mb": 329.0,
-    "event_loop_latency_ms": 0.845,
-    "active_workers": 7,
-    "throughput_qps": 1450.1,
+    "cpu_load_pct": 40.28,
+    "memory_usage_mb": 428.8,
+    "event_loop_latency_ms": 0.771,
+    "active_workers": 6,
+    "throughput_qps": 907.1,
     "disk": {
       "total_gb": 144.26,
       "used_gb": 58.18,
