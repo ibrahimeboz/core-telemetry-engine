@@ -2,7 +2,7 @@
   "metadata": {
     "node_id": "runner-ci",
     "version": "1.2.4",
-    "last_synced_utc": "2026-09-17T21:37:36Z",
+    "last_synced_utc": "2026-09-18T15:04:19Z",
     "operational_status": "OPTIMAL"
   },
   "system": {
@@ -12,11 +12,11 @@
     "cpu_count": 4
   },
   "metrics": {
-    "cpu_load_pct": 25.42,
-    "memory_usage_mb": 354.7,
-    "event_loop_latency_ms": 0.735,
-    "active_workers": 7,
-    "throughput_qps": 2160.0,
+    "cpu_load_pct": 18.47,
+    "memory_usage_mb": 252.7,
+    "event_loop_latency_ms": 0.599,
+    "active_workers": 8,
+    "throughput_qps": 2293.3,
     "disk": {
       "total_gb": 144.26,
       "used_gb": 58.18,
